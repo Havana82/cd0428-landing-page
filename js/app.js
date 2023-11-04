@@ -22,11 +22,19 @@
  * Define Global Variables
  * 
 */
+
+
 const navItems = ['Home','About Us','Services', 'Contact']
+const linkView = ['#section1', '#section2', '#section3', '#section4']
 const ul = document.querySelector('#navbar__list');
+
 for(let i=0; i<navItems.length; i++){
     const li = document.createElement('li');
-    li.textContent = navItems[i];
+    const link =document.createElement('a');
+    link.classList.add('nav_link')
+    link.textContent = navItems[i];
+    link.href = linkView[i];
+    li.appendChild(link);
     ul.appendChild(li);
 }
 
@@ -36,6 +44,24 @@ for(let i=0; i<navItems.length; i++){
  * Start Helper Functions
  * 
 */
+const navElements = document.querySelectorAll('.nav_link')
+const sectionElements= document.querySelectorAll('section')
+let currentSection = 'section1';
+window.addEventListener('scroll', ()=>{
+    sectionElements.forEach(sectionElement=>{
+        if (window.scrollY >= sectionElement.offsetTop){
+            currentSection = sectionElement.id;
+        }
+    })
+    navElements.forEach(navElement=> {
+        if(navElement.href.includes(currentSection)){
+            navElement.classList.add('active');
+        }
+        else{
+            navElement.classList.remove('active');
+        }
+    })
+})
 
 
 

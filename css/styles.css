@@ -10,6 +10,7 @@
 
 
 /* ---- Base Rules ---- */
+
 body {
     background: rgb(136,203,171);
     background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
@@ -20,6 +21,9 @@ body {
 
 
 /* Typeography General*/
+a{
+    text-decoration: none;
+}
 h1 {
     font-family: 'Fira Sans', sans-serif;
     font-size: 3em;
@@ -69,6 +73,12 @@ section {
 /* ---- Module Rules ---- */
 
 /* Navigation Styles*/
+a.active{
+    color:#eee ;
+    border-radius: 20px;
+    padding: 4px;
+    font-weight: bolder;
+}
 .navbar__menu ul {
     padding-left: 0;
     margin: 0;
