@@ -22,6 +22,13 @@
  * Define Global Variables
  * 
 */
+const navItems = ['Home','About Us','Services', 'Contact']
+const ul = document.querySelector('#navbar__list');
+for(let i=0; i<navItems.length; i++){
+    const li = document.createElement('li');
+    li.textContent = navItems[i];
+    ul.appendChild(li);
+}
 
 
 /**
