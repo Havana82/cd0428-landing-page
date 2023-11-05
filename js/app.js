@@ -25,7 +25,7 @@
 
 
 const navItems = ['Home','About Us','Services', 'Contact']
-const linkView = ['#section1', '#section2', '#section3', '#section4']
+const linkView = ['section1', 'section2', 'section3', 'section4']
 const ul = document.querySelector('#navbar__list');
 
 for(let i=0; i<navItems.length; i++){
@@ -69,8 +69,29 @@ window.addEventListener('scroll', ()=>{
  * End Helper Functions
  * Begin Main Functions
  * 
+ * 
 */
+navElements.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      sectionElements.forEach((element)=>{
+        if(link.href.includes(element.id)){
+            const target = element;
+            target.scrollIntoView({behavior:"smooth"});
+        }
 
+   
+      })
+    });
+  });
+  
+// const smoothScroll = (target, duration) =>{
+//     let target = document.querySelector(target);
+//     let targetPosition = target.getBoundingClientRect();
+//     let start = window.scrollY;
+//     let position = targetPosition - start;
+//     let startTime = null;
+// }
 // build the nav
 
 
