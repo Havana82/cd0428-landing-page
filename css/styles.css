@@ -115,7 +115,20 @@ a.active{
     color: #fff;
     transition: ease 0.3s all;
 }
-
+@media(max-width:500px){
+    .navbar__menu li{
+        font-size: 10px;
+    }
+    h1{
+        font-size: 24px;
+    }
+    h2{
+        font-size: 18px;
+    }
+    p{
+        font-size: 12px;
+    }
+}
 /* Header Styles */
 .page__header {
  

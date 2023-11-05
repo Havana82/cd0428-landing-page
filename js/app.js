@@ -19,11 +19,9 @@
 */
 
 /**
- * Define Global Variables
+ * Create Navigation links, add href and append to empty html ul
  * 
 */
-
-
 const navItems = ['Home','About Us','Services', 'Contact']
 const linkView = ['section1', 'section2', 'section3', 'section4']
 const ul = document.querySelector('#navbar__list');
@@ -41,8 +39,10 @@ for(let i=0; i<navItems.length; i++){
 
 /**
  * End Global Variables
- * Start Helper Functions
  * 
+ 
+ * Start Helper Functions
+//  select nav elements and sections to add active class function
 */
 const navElements = document.querySelectorAll('.nav_link')
 const sectionElements= document.querySelectorAll('section')
@@ -64,13 +64,12 @@ window.addEventListener('scroll', ()=>{
 })
 
 
+//  * End Helper Functions
 
-/**
- * End Helper Functions
- * Begin Main Functions
- * 
- * 
-*/
+
+//  * Begin Main Functions
+// create scroll functionslity 
+ 
 navElements.forEach((link) => {
     link.addEventListener('click', (event) => {
       event.preventDefault();
@@ -85,32 +84,4 @@ navElements.forEach((link) => {
     });
   });
   
-// const smoothScroll = (target, duration) =>{
-//     let target = document.querySelector(target);
-//     let targetPosition = target.getBoundingClientRect();
-//     let start = window.scrollY;
-//     let position = targetPosition - start;
-//     let startTime = null;
-// }
-// build the nav
-
-
-// Add class 'active' to section when near top of viewport
-
-
-// Scroll to anchor ID using scrollTO event
-
-
-/**
- * End Main Functions
- * Begin Events
- * 
-*/
-
-// Build menu 
-
-// Scroll to section on link click
-
-// Set sections as active
-
 
