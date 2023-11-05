@@ -49,7 +49,7 @@ const sectionElements= document.querySelectorAll('section')
 let currentSection = 'section1';
 window.addEventListener('scroll', ()=>{
     sectionElements.forEach(sectionElement=>{
-        if (window.scrollY >= sectionElement.offsetTop){
+        if (window.scrollY >= sectionElement.offsetTop - sectionElement.clientHeight/2){
             currentSection = sectionElement.id;
         }
     })
